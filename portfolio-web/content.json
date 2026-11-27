@@ -1,0 +1,185 @@
+{
+  "site": {
+    "name": "Fabián Leguizamón",
+    "logo": "Fabián Leguizamón",
+    "tagline": "Ilustrador",
+    "email": "fleguizamon@unsam.edu.ar",
+    "instagram": "nieko.ilus",
+    "phone": "+54 9 11 2300 5073",
+    "whatsapp": "5491123005073"
+  },
+
+  "about": {
+    "title": "About",
+    "images": ["about/about-01.jpg", "about/about-02.jpg"],
+    "esp": [
+      "¡Hola! Soy Fabián Leguizamón, ilustrador y diseñador nacido en Buenos Aires en 1992. Me formé como Diseñador Industrial (FADU, UBA) y cursé el posgrado en Ilustración Profesional (FADU, UBA) bajo la dirección de Laura Varsky, Flor Capella y Martín Laskman. Estudié ilustración con Mariano Díaz Prieto y realicé clínicas de ilustración editorial con Mariana Ruiz Johnson.",
+      "Mi trabajo abarca desde publicaciones impresas hasta exposiciones en museos nacionales. Desarrollé ilustraciones para proyectos audiovisuales, editoriales y musicales. En 2026 publiqué mi primer libro ilustrado junto al escritor Martín Blasco, bajo el sello Alfaguara de Penguin Random House.",
+      "Paralelamente, me desempeño como investigador y docente en el campo del diseño y la fabricación digital en la Universidad Nacional de San Martín (UNSAM)."
+    ],
+    "eng": [
+      "Hi! I'm Fabián Leguizamón, an illustrator and designer born in Buenos Aires in 1992. I trained as an Industrial Designer (FADU, UBA) and completed the postgraduate program in Professional Illustration (FADU, UBA) directed by Laura Varsky, Flor Capella and Martín Laskman. I studied illustration with Mariano Díaz Prieto and took editorial illustration clinics with Mariana Ruiz Johnson.",
+      "My work ranges from printed publications to exhibitions in national museums. I have illustrated audiovisual, editorial and music projects. In 2026 I published my first illustrated book with writer Martín Blasco, under Alfaguara (Penguin Random House).",
+      "I also work as a researcher and teacher in design and digital fabrication at Universidad Nacional de San Martín (UNSAM)."
+    ],
+    "lists": [
+      {
+        "title": "Ilustración editorial / Editorial illustration:",
+        "items": ["Alfaguara – Penguin Random House", "Muzzio – Feria de Editores", "Banco de Desarrollo de América Latina (CAF)", "Ñeko", "David Gudiño"]
+      },
+      {
+        "title": "Música, exposiciones y docencia / Music, exhibitions and teaching:",
+        "items": ["Varsky + Sanguineti – Álbum Diez", "Gonzalo Gamallo – Lugares comunes", "Hijxs Semilla – Universidad de Manchester", "Octubre Marrón – Manzana de las Luces", "Universidad Nacional de San Martín"]
+      }
+    ]
+  },
+
+  "projects": [
+    {
+      "slug": "en-el-cielo-brillaban",
+      "title": "En el cielo brillaban los anuncios comerciales",
+      "description": "Martín Blasco / Alfaguara",
+      "category": "Editorial",
+      "year": "2026",
+      "cover": "en-el-cielo/en-el-cielo-01.jpg",
+      "esp": "Ilustraciones para <i>En el cielo brillaban los anuncios comerciales</i>, de Martín Blasco: cinco relatos de ciencia ficción publicados por Alfaguara (Penguin Random House) en 2026. Es el primer libro ilustrado de Fabián.",
+      "eng": "Illustrations for <i>En el cielo brillaban los anuncios comerciales</i> by Martín Blasco: five science-fiction stories published by Alfaguara (Penguin Random House) in 2026. Fabián's first illustrated book.",
+      "rows": [
+        ["en-el-cielo/en-el-cielo-01.jpg", "en-el-cielo/en-el-cielo-02.jpg"],
+        ["en-el-cielo/en-el-cielo-03.jpg", "en-el-cielo/en-el-cielo-04.jpg"],
+        ["en-el-cielo/en-el-cielo-05.jpg", "en-el-cielo/en-el-cielo-06.jpg"]
+      ]
+    },
+    {
+      "slug": "el-sindrome-de-nuremberg",
+      "title": "El síndrome de Nüremberg",
+      "description": "Muzzio / Feria de Editores",
+      "category": "Editorial",
+      "year": "2024",
+      "cover": "sindrome-nuremberg/sindrome-nuremberg-01.jpg",
+      "esp": "Ilustración editorial para <i>El síndrome de Nüremberg</i> (Muzzio), presentado en la Feria de Editores 2024.",
+      "eng": "Editorial illustration for <i>El síndrome de Nüremberg</i> (Muzzio), presented at Feria de Editores 2024.",
+      "rows": [
+        ["sindrome-nuremberg/sindrome-nuremberg-01.jpg", "sindrome-nuremberg/sindrome-nuremberg-02.jpg"]
+      ]
+    },
+    {
+      "slug": "diversicaf",
+      "title": "DiversiCAF 5.0",
+      "description": "Banco de Desarrollo de América Latina",
+      "category": "Editorial",
+      "year": "2023",
+      "cover": "diversicaf/diversicaf-01.jpg",
+      "esp": "Ilustraciones para DiversiCAF 5.0 2023-2026, del Banco de Desarrollo de América Latina (CAF).",
+      "eng": "Illustrations for DiversiCAF 5.0 2023-2026, by the Development Bank of Latin America (CAF).",
+      "rows": [
+        ["diversicaf/diversicaf-01.jpg", "diversicaf/diversicaf-02.jpg"]
+      ]
+    },
+    {
+      "slug": "atamay",
+      "title": "Atamay",
+      "description": "Ñeko",
+      "category": "Editorial",
+      "year": "2022",
+      "cover": "atamay/atamay-02.jpg",
+      "esp": "Libro ilustrado <i>Atamay</i>, publicado por Ñeko en 2022.",
+      "eng": "Illustrated book <i>Atamay</i>, published by Ñeko in 2022.",
+      "rows": [
+        ["atamay/atamay-01.jpg"],
+        ["atamay/atamay-02.jpg"],
+        ["atamay/atamay-03.jpg"]
+      ]
+    },
+    {
+      "slug": "el-pacto",
+      "title": "El pacto",
+      "description": "Ñeko",
+      "category": "Editorial",
+      "year": "2023",
+      "cover": "el-pacto/el-pacto-05.jpg",
+      "esp": "Libro ilustrado <i>El pacto</i>, publicado por Ñeko en 2023.",
+      "eng": "Illustrated book <i>El pacto</i>, published by Ñeko in 2023.",
+      "rows": [
+        ["el-pacto/el-pacto-01.jpg"],
+        ["el-pacto/el-pacto-02.jpg", "el-pacto/el-pacto-03.jpg"],
+        ["el-pacto/el-pacto-04.jpg", "el-pacto/el-pacto-05.jpg"]
+      ]
+    },
+    {
+      "slug": "ventanas",
+      "title": "Ventanas",
+      "description": "David Gudiño / Teatro Marrón Fueguino",
+      "category": "Editorial",
+      "year": "2022",
+      "cover": "ventanas/ventanas-01.jpg",
+      "esp": "Tapa y contratapa ilustradas para <i>Ventanas</i>, de David Gudiño (2022).",
+      "eng": "Illustrated front and back cover for <i>Ventanas</i> by David Gudiño (2022).",
+      "rows": [
+        ["ventanas/ventanas-01.jpg"]
+      ]
+    },
+    {
+      "slug": "album-diez",
+      "title": "Álbum Diez",
+      "description": "Varsky + Sanguineti",
+      "category": "Musical",
+      "year": "2023",
+      "cover": "album-diez/album-diez-04.jpg",
+      "esp": "El 16 de abril de 2023, en la cúpula del CCK, cien personas dibujaron interpretaciones en vivo de los diez temas de <i>Diez</i>. Música: Marco Sanguineti Quinteto. Curaduría: Laura Varsky.",
+      "eng": "On April 16, 2023, under the dome of the CCK, one hundred people drew live interpretations of the ten tracks of <i>Diez</i>. Music: Marco Sanguineti Quintet. Curated by Laura Varsky.",
+      "rows": [
+        ["album-diez/album-diez-01.jpg", "album-diez/album-diez-02.jpg"],
+        ["album-diez/album-diez-03.jpg", "album-diez/album-diez-04.jpg", "album-diez/album-diez-05.jpg"]
+      ]
+    },
+    {
+      "slug": "lugares-comunes",
+      "title": "Lugares comunes",
+      "description": "Gonzalo Gamallo",
+      "category": "Musical",
+      "year": "2026",
+      "cover": "lugares-comunes/lugares-comunes-02.jpg",
+      "esp": "Arte gráfico para el disco <i>Lugares comunes</i>, de Gonzalo Gamallo (2026): tapa, arte de cada canción y librillo.",
+      "eng": "Artwork for the album <i>Lugares comunes</i> by Gonzalo Gamallo (2026): cover, single artwork and booklet.",
+      "rows": [
+        ["lugares-comunes/lugares-comunes-01.jpg", "lugares-comunes/lugares-comunes-02.jpg"],
+        ["lugares-comunes/lugares-comunes-03.jpg", "lugares-comunes/lugares-comunes-04.jpg"],
+        ["lugares-comunes/lugares-comunes-05.jpg", "lugares-comunes/lugares-comunes-06.jpg"]
+      ]
+    },
+    {
+      "slug": "exposiciones",
+      "title": "Exposiciones",
+      "description": "Hijxs Semilla / Octubre Marrón",
+      "category": "Exposiciones",
+      "year": "2021-2022",
+      "cover": "exposiciones/exposiciones-02.jpg",
+      "esp": "<i>Observación</i> (40×40 cm) – Hijxs Semilla, Universidad de Manchester, 2022.<br><i>Retrato de un paseo</i> (40×40 cm) – Octubre Marrón, Manzana de las Luces, 2021.",
+      "eng": "<i>Observación</i> (40×40 cm) – Hijxs Semilla, University of Manchester, 2022.<br><i>Retrato de un paseo</i> (40×40 cm) – Octubre Marrón, Manzana de las Luces, 2021.",
+      "rows": [
+        ["exposiciones/exposiciones-01.jpg", "exposiciones/exposiciones-02.jpg"]
+      ],
+      "captions": {
+        "exposiciones/exposiciones-01.jpg": "“Observación” (40×40 cm) – Hijxs Semilla, Universidad de Manchester, 2022",
+        "exposiciones/exposiciones-02.jpg": "“Retrato de un paseo” (40×40 cm) – Octubre Marrón, Manzana de las Luces, 2021"
+      }
+    },
+    {
+      "slug": "proyectos-personales",
+      "title": "Proyectos personales",
+      "description": "Ilustración de autor",
+      "category": "Personal",
+      "year": "2026",
+      "cover": "proyectos-personales/proyectos-personales-01.jpg",
+      "esp": "Selección de ilustraciones de autor: escenas, personajes y espacios.",
+      "eng": "A selection of personal illustrations: scenes, characters and places.",
+      "rows": [
+        ["proyectos-personales/proyectos-personales-01.jpg", "proyectos-personales/proyectos-personales-02.jpg"],
+        ["proyectos-personales/proyectos-personales-03.jpg"],
+        ["proyectos-personales/proyectos-personales-05.jpg", "proyectos-personales/proyectos-personales-07.jpg", "proyectos-personales/proyectos-personales-08.jpg"],
+        ["proyectos-personales/proyectos-personales-06.jpg"]
+      ]
+    }
+  ]
+}

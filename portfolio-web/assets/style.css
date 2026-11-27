@@ -1,0 +1,227 @@
+/* Portfolio Fabián Leguizamón
+   Layout y medidas tomadas de la referencia (Adobe Portfolio, tema "standard").
+   Fuentes: Space Mono (títulos/nav) y Jost (texto) reemplazan a las tipografías
+   Typekit de la referencia, que tienen licencia solo para ese dominio. */
+
+:root {
+  --bg: #eeeeee;
+  --header-bg: #ffffff;
+  --ink: #282828;        /* logo, nav */
+  --title: #1c1c1c;      /* títulos */
+  --muted: #757575;      /* textos y descripciones */
+  --footer: #b5b5b5;
+  --mono: "Space Mono", ui-monospace, "Courier New", monospace;
+  --sans: "Jost", "Futura", "Century Gothic", sans-serif;
+  --header-h: 50px;
+  --gap: 8px;            /* separación entre imágenes de una colección */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: #000; font-family: var(--sans); }
+img { display: block; max-width: 100%; height: auto; border: 0; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+
+/* ---------- Header fijo ---------- */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 3;
+  display: flex; align-items: center;
+  height: var(--header-h); padding: 0 3%;
+  background: var(--header-bg);
+}
+.nav { width: 35%; display: flex; gap: 0 20px; }
+.nav a, .responsive-nav nav a {
+  font-family: var(--mono); font-size: 14px; line-height: 24px; font-weight: 400;
+  text-transform: uppercase; color: var(--ink); text-decoration: none;
+}
+.nav a:hover, .nav a.active { font-weight: 700; }
+.logo-wrap { width: 30%; text-align: center; }
+.logo {
+  display: inline-block; padding: 0 8px;
+  background: #111; color: #fff; text-decoration: none;
+  font-family: var(--mono); font-weight: 700; font-size: 16px; line-height: 28px;
+  letter-spacing: .06em; text-transform: uppercase; white-space: nowrap;
+}
+.social ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.nav-social { width: 35%; }
+.nav-social ul { justify-content: flex-end; }
+.nav-social li { padding-left: 10px; }
+.social a { display: block; color: var(--ink); }
+.social svg { display: block; width: 20px; height: 20px; margin: 5px; fill: currentColor; }
+.hamburger { display: none; }
+
+/* ---------- Contenido ---------- */
+.site-content { margin: 0 5%; padding-top: var(--header-h); }
+.page { margin: 0 10%; }
+
+.page-header { max-width: 750px; margin: 0 auto; padding: 60px 0 40px; text-align: center; }
+.page-header .title {
+  margin: 0; padding-bottom: 15px;
+  font-family: var(--mono); font-size: 24px; line-height: 30px; font-weight: 700;
+  text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px;
+  color: var(--title);
+}
+.page-header .description {
+  margin: 0; font-family: var(--mono); font-style: italic;
+  font-size: 16px; line-height: 24px; color: var(--muted);
+}
+
+.module { margin: 0; padding-bottom: 20px; }
+.module-text { padding-bottom: 60px; }
+.two-col { display: flex; gap: 0 2%; }
+.two-col > * { flex: 1 1 0; }
+.rich-text p, .rich-text li {
+  margin: 0; padding: 10px 0;
+  font-family: var(--sans); font-size: 18px; line-height: 24px; color: var(--muted);
+}
+.rich-text small { font-size: 12px; text-transform: uppercase; }
+.rich-text .cat { font-weight: 400; }
+.rich-text a { color: var(--title); text-decoration: underline; }
+.rich-text ul { list-style: none; margin: 0; padding: 0; }
+.rich-text li { padding: 0; }
+.rich-text .list-title { font-weight: 500; color: var(--title); }
+
+.module-image img { width: 100%; }
+.module-collection { display: flex; gap: var(--gap); align-items: flex-start; }
+.module-collection figure { margin: 0; min-width: 0; }
+.module-collection img { width: 100%; }
+figcaption {
+  padding: 10px 0 0; font-family: var(--sans); font-size: 14px; line-height: 20px;
+  color: var(--muted); text-align: center;
+}
+
+/* ---------- Grillas de proyectos ---------- */
+.covers { display: grid; }
+.covers--grid { grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 60px 0 0; }
+.covers--others { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+.project-cover { position: relative; display: block; overflow: hidden; text-decoration: none; aspect-ratio: 216 / 303; }
+.covers--others .project-cover { aspect-ratio: 223 / 298; }
+.project-cover img { width: 100%; height: 100%; object-fit: cover; }
+.project-cover .details {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  padding: 18px; text-align: center;
+  background: rgba(28, 28, 28, .7); opacity: 0; transition: opacity .2s ease;
+}
+.project-cover:hover .details, .project-cover:focus-visible .details { opacity: 1; }
+.project-cover .details-inner { width: 100%; }
+.project-cover .title {
+  display: block; color: #fff; font-family: var(--mono); font-weight: 700;
+  font-size: 16px; line-height: 22px; text-transform: uppercase;
+}
+.covers--others .project-cover .title { font-size: 14px; line-height: 18px; }
+.project-cover .description {
+  display: block; padding-top: 5px; color: #fff; font-family: var(--mono);
+  font-style: italic; font-size: 14px; line-height: 22px;
+}
+
+.other-projects { padding: 40px 0; }
+.other-projects-title {
+  margin: 0 0 40px; font-family: var(--mono); font-size: 14px; line-height: 26px;
+  font-weight: 700; text-transform: uppercase; color: var(--muted);
+}
+
+/* ---------- Contacto ---------- */
+.contact-form { max-width: 480px; margin: 0 auto; padding-bottom: 40px; }
+.contact-form label {
+  display: block; margin-bottom: 20px; font-family: var(--sans); font-size: 14px; color: var(--title);
+}
+.contact-form input, .contact-form textarea {
+  display: block; width: 100%; margin-top: 6px; padding: 0 10px;
+  border: 1px solid #ccc; border-radius: 3px; background: #fff;
+  font-family: var(--sans); font-size: 14px; outline: none;
+}
+.contact-form input { height: 42px; }
+.contact-form textarea { height: 132px; padding: 13px 10px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--title); }
+.contact-form button {
+  padding: 0 24px; height: 42px; border: 0; border-radius: 3px; cursor: pointer;
+  background: var(--title); color: #fff; font-family: var(--mono); text-transform: uppercase; font-size: 14px;
+}
+.form-note { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+
+/* ---------- Footer y volver arriba ---------- */
+.site-footer { padding: 50px 0 100px; }
+.site-footer ul { justify-content: center; }
+.site-footer li { padding: 0 15px 30px 0; }
+.site-footer li:last-child { padding-right: 0; }
+.site-footer .social a { color: var(--footer); }
+.site-footer .social a:hover { color: var(--ink); }
+
+.back-to-top {
+  position: fixed; right: 40px; bottom: 40px; z-index: 3;
+  width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+  background: rgba(117, 117, 117, .1);
+}
+.back-to-top svg { width: 26px; height: 26px; fill: #000; opacity: .25; }
+.back-to-top:hover { background: rgba(0, 0, 0, .2); }
+.back-to-top:hover svg { opacity: .5; }
+
+/* ---------- Menú mobile ---------- */
+.responsive-nav {
+  position: fixed; inset: 0; z-index: 99999; display: flex; flex-direction: column;
+  padding: 50px 5% 0; background: #fff; text-align: center;
+  opacity: 0; transition: opacity .2s ease;
+}
+.responsive-nav[hidden] { display: none; }
+.responsive-nav.open { opacity: 1; }
+.responsive-nav nav { margin: auto; display: flex; flex-direction: column; }
+.responsive-nav nav a { font-size: 22px; line-height: 32px; padding-bottom: 30px; }
+.responsive-nav .social { border-top: 1px solid rgba(0,0,0,.08); padding: 5%; }
+.responsive-nav .social ul { justify-content: center; gap: 20px; }
+.responsive-nav .social svg { width: 34px; height: 34px; }
+.close-nav { position: absolute; inset: 0; z-index: -1; background: none; border: 0; cursor: pointer; }
+body.nav-open { overflow: hidden; }
+
+/* ---------- Responsive (cortes de la referencia: 932px y 540px) ---------- */
+@media (max-width: 932px) {
+  .site-header { padding: 0 5%; }
+  .nav, .nav-social { display: none; }
+  .logo-wrap { width: 100%; padding-left: 39px; }
+  .logo { font-size: clamp(15px, 5.2vw, 30px); line-height: 1.45; padding: 0 8px; }
+  .hamburger {
+    display: block; width: 39px; padding: 8px 0 8px 15px; border: 0; background: none; cursor: pointer;
+  }
+  .hamburger i { display: block; height: 2px; margin-bottom: 4px; background: var(--ink); }
+  .hamburger i:last-child { margin-bottom: 0; }
+
+  .site-content { margin: 0; }
+  .page { margin: 0; }
+  .page-header { padding: 28px 5% 20px; }
+  .page-header .title { font-size: 18px; line-height: 23px; padding-bottom: 11px; }
+  .page-header .description { font-size: 14px; line-height: 20px; }
+  .module-text { padding: 13px 5% 18px; }
+  .two-col { flex-direction: column; }
+  .rich-text p { font-size: 14px; line-height: 19px; padding: 8px 0; }
+  .rich-text li { font-size: 14px; line-height: 19px; }
+  .module { padding-bottom: 13px; }
+  .module-collection { gap: 4px; }
+  figcaption { padding: 6px 5% 0; font-size: 12px; line-height: 16px; }
+
+  .covers--grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 20px 5% 0; }
+  .covers--others { grid-template-columns: repeat(2, 1fr); }
+  .covers--others .project-cover:nth-child(n+3) { display: none; }
+  .other-projects { padding: 18px 0; }
+  .other-projects-title { margin: 0 5% 20px; }
+  .site-footer { padding: 24px 0 40px; }
+  .back-to-top { display: none; }
+}
+@media (max-width: 540px) {
+  .page-header { padding: 25px 5% 18px; }
+  .page-header .title { font-size: 15px; line-height: 19px; padding-bottom: 10px; }
+  .rich-text p, .rich-text li { font-size: 14px; line-height: 20px; padding: 7px 0; }
+  .rich-text li { padding: 0; }
+  .covers--grid { grid-template-columns: 1fr; padding: 20px 0 0; gap: 0; }
+  .covers--others { grid-template-columns: 1fr; gap: 0; }
+  .covers--others .project-cover:nth-child(n+2) { display: none; }
+  .project-cover .details { opacity: 0; }
+  .site-footer { padding: 21px 0 34px; }
+}
+@media (hover: none) {
+  /* en pantallas táctiles el título queda visible sobre la imagen, abajo */
+  .project-cover .details { opacity: 1; align-items: flex-end; background: linear-gradient(transparent 55%, rgba(28,28,28,.75)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
