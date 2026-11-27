@@ -4,12 +4,18 @@
    Typekit de la referencia, que tienen licencia solo para ese dominio. */
 
 :root {
-  --bg: #eeeeee;
-  --header-bg: #ffffff;
-  --ink: #282828;        /* logo, nav */
-  --title: #1c1c1c;      /* títulos */
-  --muted: #757575;      /* textos y descripciones */
-  --footer: #b5b5b5;
+  /* Paleta: blanco, gris oscuro, melocotón y celeste bandera */
+  --white: #ffffff;
+  --gray: #2b2d33;       /* gris oscuro */
+  --peach: #ffcba4;      /* melocotón */
+  --sky: #74acdf;        /* celeste bandera */
+
+  --bg: var(--white);
+  --header-bg: var(--peach);
+  --ink: var(--gray);    /* logo, nav */
+  --title: var(--gray);  /* títulos */
+  --muted: #5b5f68;      /* textos y descripciones (tono más claro del gris oscuro) */
+  --footer: var(--gray);
   --mono: "Space Mono", ui-monospace, "Courier New", monospace;
   --sans: "Jost", "Futura", "Century Gothic", sans-serif;
   --header-h: 50px;
@@ -18,7 +24,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { background: var(--bg); scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: #000; font-family: var(--sans); }
+body { margin: 0; background: var(--bg); color: var(--gray); font-family: var(--sans); }
 img { display: block; max-width: 100%; height: auto; border: 0; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
@@ -35,11 +41,15 @@ button { font: inherit; color: inherit; }
   font-family: var(--mono); font-size: 14px; line-height: 24px; font-weight: 400;
   text-transform: uppercase; color: var(--ink); text-decoration: none;
 }
-.nav a:hover, .nav a.active { font-weight: 700; }
+.nav a:hover, .nav a.active {
+  font-weight: 700;
+  text-decoration: underline; text-decoration-color: var(--sky);
+  text-decoration-thickness: 3px; text-underline-offset: 6px;
+}
 .logo-wrap { width: 30%; text-align: center; }
 .logo {
   display: inline-block; padding: 0 8px;
-  background: #111; color: #fff; text-decoration: none;
+  background: var(--gray); color: var(--white); text-decoration: none;
   font-family: var(--mono); font-weight: 700; font-size: 16px; line-height: 28px;
   letter-spacing: .06em; text-transform: uppercase; white-space: nowrap;
 }
@@ -59,7 +69,8 @@ button { font: inherit; color: inherit; }
 .page-header .title {
   margin: 0; padding-bottom: 15px;
   font-family: var(--mono); font-size: 24px; line-height: 30px; font-weight: 700;
-  text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px;
+  text-transform: uppercase; text-decoration: underline; text-underline-offset: 6px;
+  text-decoration-color: var(--sky); text-decoration-thickness: 3px;
   color: var(--title);
 }
 .page-header .description {
@@ -77,7 +88,8 @@ button { font: inherit; color: inherit; }
 }
 .rich-text small { font-size: 12px; text-transform: uppercase; }
 .rich-text .cat { font-weight: 400; }
-.rich-text a { color: var(--title); text-decoration: underline; }
+.rich-text a { color: var(--title); text-decoration: underline; text-decoration-color: var(--sky); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.rich-text a:hover { background: var(--peach); }
 .rich-text ul { list-style: none; margin: 0; padding: 0; }
 .rich-text li { padding: 0; }
 .rich-text .list-title { font-weight: 500; color: var(--title); }
@@ -101,17 +113,17 @@ figcaption {
 .project-cover .details {
   position: absolute; inset: 0; display: flex; align-items: center;
   padding: 18px; text-align: center;
-  background: rgba(28, 28, 28, .7); opacity: 0; transition: opacity .2s ease;
+  background: rgba(43, 45, 51, .78); opacity: 0; transition: opacity .2s ease;
 }
 .project-cover:hover .details, .project-cover:focus-visible .details { opacity: 1; }
 .project-cover .details-inner { width: 100%; }
 .project-cover .title {
-  display: block; color: #fff; font-family: var(--mono); font-weight: 700;
+  display: block; color: var(--white); font-family: var(--mono); font-weight: 700;
   font-size: 16px; line-height: 22px; text-transform: uppercase;
 }
 .covers--others .project-cover .title { font-size: 14px; line-height: 18px; }
 .project-cover .description {
-  display: block; padding-top: 5px; color: #fff; font-family: var(--mono);
+  display: block; padding-top: 5px; color: var(--peach); font-family: var(--mono);
   font-style: italic; font-size: 14px; line-height: 22px;
 }
 
@@ -128,46 +140,48 @@ figcaption {
 }
 .contact-form input, .contact-form textarea {
   display: block; width: 100%; margin-top: 6px; padding: 0 10px;
-  border: 1px solid #ccc; border-radius: 3px; background: #fff;
+  border: 1px solid var(--gray); border-radius: 3px; background: var(--white);
   font-family: var(--sans); font-size: 14px; outline: none;
 }
 .contact-form input { height: 42px; }
 .contact-form textarea { height: 132px; padding: 13px 10px; resize: vertical; }
-.contact-form input:focus, .contact-form textarea:focus { border-color: var(--title); }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(116, 172, 223, .35); }
 .contact-form button {
   padding: 0 24px; height: 42px; border: 0; border-radius: 3px; cursor: pointer;
-  background: var(--title); color: #fff; font-family: var(--mono); text-transform: uppercase; font-size: 14px;
+  background: var(--sky); color: var(--gray); font-family: var(--mono); font-weight: 700; text-transform: uppercase; font-size: 14px;
+  transition: background .2s ease;
 }
+.contact-form button:hover { background: var(--peach); }
 .form-note { font-family: var(--sans); font-size: 13px; color: var(--muted); }
 
 /* ---------- Footer y volver arriba ---------- */
-.site-footer { padding: 50px 0 100px; }
+.site-footer { padding: 50px 0 100px; background: var(--peach); }
 .site-footer ul { justify-content: center; }
 .site-footer li { padding: 0 15px 30px 0; }
 .site-footer li:last-child { padding-right: 0; }
 .site-footer .social a { color: var(--footer); }
-.site-footer .social a:hover { color: var(--ink); }
+.site-footer .social a:hover { color: var(--white); }
 
 .back-to-top {
   position: fixed; right: 40px; bottom: 40px; z-index: 3;
   width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
-  background: rgba(117, 117, 117, .1);
+  background: var(--sky);
 }
-.back-to-top svg { width: 26px; height: 26px; fill: #000; opacity: .25; }
-.back-to-top:hover { background: rgba(0, 0, 0, .2); }
-.back-to-top:hover svg { opacity: .5; }
+.back-to-top svg { width: 26px; height: 26px; fill: var(--gray); opacity: .8; }
+.back-to-top:hover { background: var(--gray); }
+.back-to-top:hover svg { fill: var(--white); opacity: 1; }
 
 /* ---------- Menú mobile ---------- */
 .responsive-nav {
   position: fixed; inset: 0; z-index: 99999; display: flex; flex-direction: column;
-  padding: 50px 5% 0; background: #fff; text-align: center;
+  padding: 50px 5% 0; background: var(--peach); text-align: center;
   opacity: 0; transition: opacity .2s ease;
 }
 .responsive-nav[hidden] { display: none; }
 .responsive-nav.open { opacity: 1; }
 .responsive-nav nav { margin: auto; display: flex; flex-direction: column; }
 .responsive-nav nav a { font-size: 22px; line-height: 32px; padding-bottom: 30px; }
-.responsive-nav .social { border-top: 1px solid rgba(0,0,0,.08); padding: 5%; }
+.responsive-nav .social { border-top: 2px solid var(--sky); padding: 5%; }
 .responsive-nav .social ul { justify-content: center; gap: 20px; }
 .responsive-nav .social svg { width: 34px; height: 34px; }
 .close-nav { position: absolute; inset: 0; z-index: -1; background: none; border: 0; cursor: pointer; }
@@ -219,7 +233,7 @@ body.nav-open { overflow: hidden; }
 }
 @media (hover: none) {
   /* en pantallas táctiles el título queda visible sobre la imagen, abajo */
-  .project-cover .details { opacity: 1; align-items: flex-end; background: linear-gradient(transparent 55%, rgba(28,28,28,.75)); }
+  .project-cover .details { opacity: 1; align-items: flex-end; background: linear-gradient(transparent 55%, rgba(43,45,51,.82)); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
